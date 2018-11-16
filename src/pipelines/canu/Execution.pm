@@ -1013,7 +1013,7 @@ sub buildGridJob ($$$$$$$$$) {
     print F "bgnLoop=\$(echo \"\${array[1]}\" | cut -d- -f1)\n"; # need to get the jobs submitted correctly
     print F "endLoop=\$(echo \"\${array[1]}\" | cut -d- -f2)\n"; # use a loop instead of an array
     print F "\n";
-    print F "if [ -z "$array" ]\n";                              # insert
+    print F "if [ -z \$bgnLoop ]\n";                             # insert
     print F "then\n";                                            #
     print F "bgnLoop=1\n";                                       # If only 1 job is going to run $arrayOpt
     print F "endLoop=1\n";                                       # will be empty. Set loop [1..1]
