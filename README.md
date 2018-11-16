@@ -47,7 +47,8 @@ Full list of parameters:
  
 #############################################################
 
-raijin
+for compiling on raijin: module load gcc/4.9.0 
+
 
 set -euo pipefail # safe mode
 
