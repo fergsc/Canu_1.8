@@ -59,17 +59,17 @@ GRID_OPTIONS="-P {project} -q normal -l jobfs=400GB -l software=canu -l wd -N CA
 module load gnuplot
 
 /location/of/canu/Linux-amd64/bin/canu \
--p assembly_name \
--d /short/${PROJECT}/${USER}/canu_assembly \
--nanopore-raw /location/of/reads.fastq \
-genomeSize=XXXm \
-maxThreads=512 \
-maxMemory=63 \
-gridOptions="$GRID_OPTIONS" \
-useGrid=remote \
-gridEngineThreadsOption="-l ncpus=THREADS" \
-executiveMemory=2 \
-executiveThreads=1 \
-java=/apps/java/jdk-10.0.1/bin/java \
-gnuplot=/apps/gnuplot/5.2.4/bin/gnuplot
+        -p assembly_name \
+        -d /short/${PROJECT}/${USER}/canu_assembly \
+        -nanopore-raw /location/of/reads.fastq \
+        genomeSize=XXXm \
+        maxThreads=512 \
+        maxMemory=63 \
+        gridOptions="$GRID_OPTIONS" \
+        useGrid=remote \
+        gridEngineThreadsOption="-l ncpus=THREADS" \
+        executiveMemory=2 \
+        executiveThreads=1 \
+        java=/apps/java/jdk-10.0.1/bin/java \
+        gnuplot=/usr/bin/gnuplot
 
